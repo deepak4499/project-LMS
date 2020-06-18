@@ -16,7 +16,17 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    firebase:{
+    apiKey: "AIzaSyAzg0ncgrDTNUL6NXLWcFACl7UxLObAYtM",
+    authDomain: "library-mgmt-sys.firebaseapp.com",
+    databaseURL: "https://library-mgmt-sys.firebaseio.com",
+    projectId: "library-mgmt-sys",
+    storageBucket: "library-mgmt-sys.appspot.com",
+    messagingSenderId: "877680517820",
+    appId: "1:877680517820:web:be7841c8bac0e5b42ae6b9",
+    measurementId: "G-XKFX86Z8WS"
+    },
+    
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

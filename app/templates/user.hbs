@@ -1,0 +1,9 @@
+<h3>hiii {{this.model.printuser.username}}</h3>
+<div class="d-flex col-xl-6 justify-content-around">
+  <button class="btn btn-primary" {{action "buy"}}>BuyBook</button>
+  <button class="btn btn-danger" {{action "books"}}>List of Books</button>
+</div>
+  {{#if buy}}
+    <BuyBooks @buy={{buy}} @books={{this.model.books}}/>
+  {{/if}}
+{{outlet}}
