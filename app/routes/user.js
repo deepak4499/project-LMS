@@ -5,7 +5,7 @@ export default Route.extend({
     userdetail:service(),
     model(){
         return{
-            books:this.store.findAll("books"),
+            books:this.store.findAll("book"),
             printuser:this.userdetail
         }
     }
