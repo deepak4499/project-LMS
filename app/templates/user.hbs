@@ -4,6 +4,6 @@
   <button class="btn btn-danger" {{action "books"}}>List of Books</button>
 </div>
   {{#if buy}}
-    <BuyBooks @buy={{buy}} @books={{this.model.books}}/>
+    <BuyBooks @user={{this.model.printuser.username}} @buy={{buy}} @books={{this.model.books}}/>
   {{/if}}
 {{outlet}}

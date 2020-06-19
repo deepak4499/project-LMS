@@ -9,12 +9,8 @@ export default Controller.extend({
     actions:{
         login(){
             this.userdetail.newuser(this.userName);
-            this.store.query("signin",{
-            filter:{
-                userName:this.userName,
-                password:this.password
-            }
-            }).then( (users)=>{ 
+            this.store.findAll("signin").then( (users)=>{ 
+                if(users!=null){
                 users.forEach(user => {
                     if(user.get("userName")==this.userName && user.get("password")==this.password)
                     {
@@ -27,10 +23,16 @@ export default Controller.extend({
                             this.transitionToRoute("user");
                         }
                     }
-                    else{
-                        window.alert("username or password is incorrect.please try again")
+                    else if(user.get("userName")==this.userName || user.get("password")==this.password){
+                        window.alert("username or password is incorrect.please try again");
+                        this.transitionToRoute("home");
                     }
                 })
+            }
+            else{
+                window.alert("you are not signup first signup then login");
+                this.transitionToRoute("signup");
+              }
             });
         }
     },
