@@ -5,7 +5,7 @@ export default Model.extend({
     username:attr(),
     bookname:attr(),
     author:attr(),
-    yearofpublication:attr(),
-    rate:attr(),
+    yearofpublication:attr("number"),
+    rate:attr("number"),
     describtion:attr()
 });

@@ -6,7 +6,12 @@ export default Route.extend({
     model(){
         return{
             books:this.store.findAll("book"),
-            printuser:this.userdetail
+            printuser:this.userdetail,
+            userbookdetail:this.store.query("userbook",{
+                filter: {
+                  username:this.userdetail.username
+                }
+            })
         }
     }
 });

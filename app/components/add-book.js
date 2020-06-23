@@ -8,6 +8,7 @@ export default Component.extend({
     yearOfPublication:null,
     rate:null,
     describtion:null,
+    bookCount:null,
     actions:{
         addbook(){
             this.toggleProperty("expand");
@@ -16,7 +17,8 @@ export default Component.extend({
                 author:this.author,
                 yearOfPublication:this.yearOfPublication,
                 rate:this.rate,
-                describtion:this.describtion
+                describtion:this.describtion,
+                count:this.bookCount
             }).save();
         }
     }

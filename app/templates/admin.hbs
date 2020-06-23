@@ -1,9 +1,20 @@
 <div class="d-flex col-xl-6 justify-content-around">
-  <button class="btn btn-primary" {{action "toggle"}}>AddBook</button>
-  <button class="btn btn-danger" {{action "books"}}>List of Books Category</button>
+  <button class="btn btn-warning" {{action "toggle"}}>AddBook</button>
+  <LinkTo class="btn btn-primary" @route="login">Login</LinkTo>
+  <LinkTo class="btn btn-success" @route="home">Home</LinkTo>
+  <LinkTo class="btn btn-danger" @route="signup">SignUp</LinkTo>
+  <LinkTo class="btn btn-dark" @route="bookslist">List of Books</LinkTo>
+  <button class="btn btn-secondary" {{action "addcount"}}>changeBookCount</button>
 </div>
 <br>
   {{#if isExpanded}}
     <AddBook @expand={{isExpanded}}/>
+  {{/if}}
+  {{#if showcount}}
+    <div>
+      {{#each this.model.books as |book|}}
+        <BookCount @bookdetail={{book}}/>
+      {{/each}}
+    </div>
   {{/if}}
 {{outlet}}

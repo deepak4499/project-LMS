@@ -3,7 +3,7 @@ import Component from '@ember/component';
 export default Component.extend({
     init(){
         this._super(...arguments);
-        this.book=this.bookdetail;
+        this.book=this.detail;
     },
     show:true,
     hide:false,
@@ -15,6 +15,6 @@ export default Component.extend({
         showless(){
             this.toggleProperty("show");
             this.toggleProperty("hide");
-        },
+        }
     },
-}); 
+});

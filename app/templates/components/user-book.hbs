@@ -1,11 +1,11 @@
 <div class="mx-2 border border-success p-3">
-  <p class="mx-4">Book:  {{this.book.bookName}}</p>
+  <p class="mx-4">Book:  {{this.book.bookname}}</p>
   <p class="mx-4">Author:  {{this.book.author}}</p>
   {{#if this.hide}}
-    <p class="mx-4">Year of Publication:  {{this.book.yearOfPublication}}</p>
+    <p class="mx-4">Year of Publication:  {{this.book.yearofpublication}}</p>
     <p class="mx-4">Amount:  {{this.book.rate}}</p>
     <p class="mx-4">Describtion:  {{this.book.describtion}}</p>
-    <p class="mx-4">Book Count: {{this.book.count}}</p>
+    <p class="mx-4">Book Count:  {{this.book.count}}</p>
     <button {{action "showless"}}>Show Less</button>
   {{/if}}
   {{#if this.show}}

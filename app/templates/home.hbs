@@ -1,8 +1,10 @@
+<br>
 <div class="d-flex justify-content-around">
-  <button class="btn btn-primary" {{action "log"}}>Login</button>
-  <button class="btn btn-success" {{action "sign"}}>SignUp</button>
-  <button class="btn btn-danger" {{action "books"}}>List of Books</button>
+  <LinkTo class="btn btn-primary" @route="login">Login</LinkTo>
+  <LinkTo class="btn btn-success" @route="signup">SignUp</LinkTo>
+  <LinkTo class="btn btn-danger" @route="bookslist">List of Books</LinkTo>
 </div>
+<br>
 <h4 class="mx-4">Hii, Welcome.</h4>
 <h5 class="mx-4">Are you new user please SignUp first</h5>
 <h5 class="mx-4">After that you must be login using your Username and Password</h5>

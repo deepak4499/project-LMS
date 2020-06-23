@@ -1,2 +1,7 @@
 <h1 class="text-center text-primary">Welcome to Digital Library</h1>
+{{#if start}}
+  <div>
+    <LinkTo @route="home" {{action "start"}}>Go To Home</LinkTo>
+  </div>
+{{/if}}
 {{outlet}}

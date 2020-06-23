@@ -1,9 +1,20 @@
-<h3>hiii {{this.model.printuser.username}}</h3>
+<br>
 <div class="d-flex col-xl-6 justify-content-around">
   <button class="btn btn-primary" {{action "buy"}}>BuyBook</button>
-  <button class="btn btn-danger" {{action "books"}}>List of Books</button>
+  <LinkTo class="btn btn-primary" @route="login">Login</LinkTo>
+  <LinkTo class="btn btn-success" @route="home">Home</LinkTo>
+  <LinkTo class="btn btn-danger" @route="signup">SignUp</LinkTo>
+  <LinkTo class="btn btn-secondary" @route="bookslist">List of Books</LinkTo>
 </div>
+<br>
+<h3>hiii {{this.model.printuser.username}}</h3>
   {{#if buy}}
     <BuyBooks @user={{this.model.printuser.username}} @buy={{buy}} @books={{this.model.books}}/>
+  {{/if}}
+  {{#if userbook}}
+    <p>List of Books you Bought Already</p>
+    {{#each this.model.userbookdetail as |book|}}
+      <UserBook @detail={{book}}/>
+    {{/each}}
   {{/if}}
 {{outlet}}

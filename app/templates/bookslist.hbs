@@ -1,3 +1,10 @@
+<br>
+<div class="d-flex justify-content-around">
+  <LinkTo class="btn btn-primary" @route="login">Login</LinkTo>
+  <LinkTo class="btn btn-success" @route="home">Home</LinkTo>
+  <LinkTo class="btn btn-danger" @route="signup">SignUp</LinkTo>
+</div>
+<br>
 <div>
   {{#each this.model.books as |book|}}
     <ShowList @bookdetail={{book}}/>

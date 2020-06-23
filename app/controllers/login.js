@@ -8,6 +8,10 @@ export default Controller.extend({
     password:null,
     actions:{
         login(){
+            if(this.userName==""&&this.password==""){
+                window.alert("please enter the username and password");
+                this.transitionToRoute("login");
+            }
             this.userdetail.newuser(this.userName);
             this.store.findAll("signin").then( (users)=>{ 
                 if(users!=null){

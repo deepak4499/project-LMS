@@ -1,0 +1,8 @@
+<div class="mx-2 border border-success p-3">
+    <p class="mx-4">Book:  {{this.book.bookName}}</p>
+    <p class="mx-4">Author:  {{book.author}}</p>
+    <p class="mx-4">Count: {{book.count}}</p>
+    <button {{action "addbookcount" this.book}}>Add Book Count</button>
+    <br>
+</div>
+{{yield}}
